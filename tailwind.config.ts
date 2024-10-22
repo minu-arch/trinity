@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      translate: {
+        "custom-open": "-55%, 2%",
+        "custom-closed": "-54%, -100%",
+      },
       container: {
         center: true,
         padding: "1rem",
