@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import containerQueries from "@tailwindcss/container-queries";
 
 const config: Config = {
   content: [
@@ -8,12 +9,30 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+      },
+      screens: {
+        s: "360px",
+        xs: "420px",
+      },
+      fontSize: {
+        "responsive-sm": "clamp(1rem, 3vw, 1.5rem)",
+        "responsive-md": "clamp(1.5rem, 4vw, 4rem)",
+        "responsive-lg": "clamp(2rem, 6vw, 4rem)",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        colored: "#eceeed",
+        coloree: "#eeeeee",
+        colorgreen: "#2d5736",
+        acmeinc: "#adb5b2",
+        clrtitle: "#113b29",
+        clrnavbar: "#5b7253",
+        clrparagraph: "#366740",
       },
     },
   },
-  plugins: [],
+  plugins: [containerQueries],
 };
 export default config;
