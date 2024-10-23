@@ -3,9 +3,25 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const poppinsSans = localFont({
-  src: "./fonts/Poppins-Regular.ttf",
+  src: [
+    {
+      path: "./fonts/Poppins-Regular.ttf",
+      weight: "400", // Greutatea pentru Regular
+    },
+    {
+      path: "./fonts/Poppins-Bold.ttf",
+      weight: "700", // Greutatea pentru Bold
+    },
+    {
+      path: "./fonts/Poppins-ExtraBold.ttf",
+      weight: "800", // Greutatea pentru ExtraBold
+    },
+    {
+      path: "./fonts/Poppins-Black.ttf",
+      weight: "900", // Greutatea pentru Black
+    },
+  ],
   variable: "--font-Poppins",
-  weight: "100 900",
 });
 
 export const metadata: Metadata = {

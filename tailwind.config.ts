@@ -22,12 +22,13 @@ const config: Config = {
         xs: "420px",
       },
       fontSize: {
-        "responsive-sm": "clamp(1rem, 3vw, 1.5rem)",
+        "responsive-xs": "clamp(1rem, 1vw, 1.5rem)",
+        "responsive-sm": "clamp(1.5rem, 2.5vw, 2rem)",
         "responsive-md": "clamp(1.5rem, 4vw, 4rem)",
         "responsive-lg": "clamp(2rem, 6vw, 4rem)",
       },
       colors: {
-        colored: "#eceeed",
+        colored: "#f7f7f5",
         coloree: "#eeeeee",
         colorgreen: "#2d5736",
         acmeinc: "#adb5b2",
