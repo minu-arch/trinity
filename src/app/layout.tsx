@@ -36,7 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppinsSans.variable} antialiased`}>{children}</body>
+      <body className={`${poppinsSans.variable} overflow-x-hidden antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -2,8 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-colored w-[100vw]">
-      <div className="container flex items-center justify-center">Footer</div>
+    <div className="w-dvw bg-colored">
+      <div className="container mx-auto flex items-center justify-center">
+        Footer
+      </div>
     </div>
   );
 };

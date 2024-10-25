@@ -22,9 +22,9 @@ const config: Config = {
         xs: "420px",
       },
       fontSize: {
-        "responsive-xs": "clamp(1rem, 1vw, 1.5rem)",
-        "responsive-sm": "clamp(1.5rem, 2.5vw, 2rem)",
-        "responsive-md": "clamp(1.5rem, 4vw, 4rem)",
+        "responsive-xs": "clamp(0.5rem, 1.3vw, 1.7rem)",
+        "responsive-sm": "clamp(1rem, 2vw, 2.5rem)",
+        "responsive-md": "clamp(1.7rem, 3.5vw, 3rem)",
         "responsive-lg": "clamp(2rem, 6vw, 4rem)",
       },
       colors: {
@@ -35,6 +35,7 @@ const config: Config = {
         clrtitle: "#113b29",
         clrnavbar: "#5b7253",
         clrparagraph: "#366740",
+        bgtext: "#e9e9e9",
       },
     },
   },

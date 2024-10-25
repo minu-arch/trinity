@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 const page = () => {
   return (
-    <div className="w-md sm:w-xl md:w-3xl lg:w-4xl xl:w-5xl 2xl:w-6xl container flex size-full flex-col items-center justify-center p-5">
+    <div className="flex size-full shrink flex-col items-center justify-center p-5">
       <NavBar />
       <Header />
       <Main />
