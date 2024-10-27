@@ -6,19 +6,19 @@ const poppinsSans = localFont({
   src: [
     {
       path: "./fonts/Poppins-Regular.ttf",
-      weight: "400", // Greutatea pentru Regular
+      weight: "400",
     },
     {
       path: "./fonts/Poppins-Bold.ttf",
-      weight: "700", // Greutatea pentru Bold
+      weight: "700",
     },
     {
       path: "./fonts/Poppins-ExtraBold.ttf",
-      weight: "800", // Greutatea pentru ExtraBold
+      weight: "800",
     },
     {
       path: "./fonts/Poppins-Black.ttf",
-      weight: "900", // Greutatea pentru Black
+      weight: "900",
     },
   ],
   variable: "--font-Poppins",

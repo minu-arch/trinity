@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <div className="container">
-      <div className="text-clrnavbar mt-5 size-full">
+      <div className="mt-5 size-full text-clrnavbar">
         <div className="flex w-full flex-wrap items-center justify-between gap-4">
           <div>
             <LogoNav />

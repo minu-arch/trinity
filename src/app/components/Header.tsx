@@ -11,7 +11,7 @@ import {
   NetflixSvg,
   DockerSvg,
 } from "@/app/svg/SvgIcons";
-
+import TinyBarChart from "./components/TinyBartChart";
 const Header = () => {
   const [status, setStatus] = useState("deposit");
 
@@ -81,8 +81,9 @@ const Header = () => {
         </p>
       </div>
       <div className="flex size-full flex-col gap-4 xl:flex-row">
-        <div className="relative flex size-full flex-col">
-          <div className="flex size-full flex-grow flex-col rounded-lg bg-colored pl-4 md:pl-10">
+        {/* Brokerage Account */}
+        <div className="relative flex size-full h-full min-h-[464px] flex-col">
+          <div className="relative flex flex-grow flex-col rounded-lg bg-colored pl-4 md:pl-10">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               Brokerage Account
             </p>
@@ -93,68 +94,78 @@ const Header = () => {
               We offer investment options from stocks to real,{"\n"} estate
               allowing you to grow your wealth efficiently.
             </p>
-            <div className="absoulte mx-auto my-10 flex items-center justify-center">
-              <div className="flex items-center justify-center gap-4">
+            <div className="container relative my-10 flex w-full items-center justify-center px-10 s:px-1">
+              <div className="z-30 flex w-2/4 shrink items-center justify-between gap-4 rounded-lg bg-white px-2 py-5 s:flex-col xs:flex-row">
                 <div className="flex flex-col">
-                  <h1>General Investing Account</h1>
-                  <p>USD Account (...3654)</p>
+                  <p className="text-xs text-clrtitle s:text-[9px]">
+                    General Investing Account
+                  </p>
+                  <p className="text-xs text-clrnavbar s:text-[9px]">
+                    USD Account (...3654)
+                  </p>
                 </div>
 
-                <div className="relative flex h-6 min-h-min min-w-min items-center justify-center overflow-visible rounded-lg bg-bgtext">
-                  <div className="flex h-6 items-center justify-center rounded-lg bg-bgtext">
+                <div className="flex h-6 w-auto rounded-lg bg-bgtext">
+                  <div className="flex h-6 items-center rounded-lg bg-bgtext">
                     {status === "deposit" && (
-                      <h1 className="px-2 text-xs">Deposit</h1>
+                      <h1 className="px-2 text-xs leading-tight tracking-tight s:text-[9px]">
+                        Deposit
+                      </h1>
                     )}
                   </div>
                   <AnimatePresence>
                     {status === "depositing" && (
                       <motion.div
                         className="mx-auto flex h-6 items-center justify-center rounded-lg bg-colorgreen px-2 text-xs text-white"
-                        initial={{ opacity: 0, y: -10 }} // începe de sus
-                        animate={{ opacity: 1, y: 0 }} // se mișcă în poziția finală
-                        exit={{ opacity: 0, y: 10 }} // iese în jos
-                        transition={{ duration: 0.5, ease: "easeInOut" }} // tranziție lină
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
                       >
-                        Depositing
+                        <p className="text-xs leading-tight tracking-tight s:text-[9px]">
+                          Depositing
+                        </p>
                       </motion.div>
                     )}
                     {status === "successful" && (
                       <motion.div
                         className="mx-auto flex h-6 items-center justify-center rounded-lg bg-colorgreen px-2 text-xs text-white"
-                        initial={{ opacity: 0, y: -10 }} // începe de sus
-                        animate={{ opacity: 1, y: 0 }} // se mișcă în poziția finală
-                        exit={{ opacity: 0, y: 10 }} // iese în jos
-                        transition={{ duration: 0.5, ease: "easeInOut" }} // tranziție lină
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
                       >
-                        Deposit Successful
+                        <p className="text-xs leading-tight tracking-tight s:text-[9px]">
+                          Deposit Successful
+                        </p>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                  {/* Spațiu rezervat pentru a preveni mișcarea containerului */}
-                  <div
-                    className="absolute h-6 w-full"
-                    style={{
-                      visibility: status === "deposit" ? "hidden" : "visible",
-                    }}
-                  />
                 </div>
               </div>
-              <div></div>
-              <div></div>
+              <div className="xxl:top-[74%] absolute left-1/2 top-[73%] z-10 w-[70%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-sm md:top-[75%]"></div>
+              <div className="absolute left-1/2 top-[70%] z-20 w-[75%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-sm md:top-[72%] lg:top-[72%]"></div>
             </div>
           </div>
         </div>
-        <div className="flex size-full flex-grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
-          <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
-            IRA Account
-          </p>
-          <h1 className="text-responsive-sm text-clrtitle">
-            Retirement Investing
-          </h1>
-          <p className="text-responsive-xs text-clrnavbar md:whitespace-pre-line">
-            Save and invest for your retirement years, ensuring a{"\n"}
-            comfortable lifestyle when you stop working.
-          </p>
+
+        {/* IRA Account */}
+        <div className="flex size-full min-h-[464px] flex-grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
+          <div className="flex flex-col items-start">
+            <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
+              IRA Account
+            </p>
+            <h1 className="text-responsive-sm text-clrtitle">
+              Retirement Investing
+            </h1>
+            <p className="text-responsive-xs text-clrnavbar md:whitespace-pre-line">
+              Save and invest for your retirement years, ensuring a{"\n"}
+              comfortable lifestyle when you stop working.
+            </p>
+          </div>
+          <div className="flex size-full shrink items-center justify-center">
+            <TinyBarChart />
+          </div>
         </div>
       </div>
     </div>
