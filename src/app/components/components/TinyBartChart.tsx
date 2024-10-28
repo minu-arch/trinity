@@ -13,7 +13,7 @@ export default function TinyBarChart() {
       series={[{ data: uData, label: "uv", type: "bar" }]}
       xAxis={[{ scaleType: "band", data: xLabels }]}
     >
-      <BarPlot />
+      <BarPlot borderRadius={7} color="#546c4c" />
     </ChartContainer>
   );
 }

@@ -10,6 +10,9 @@ import {
   GachaClub,
   NetflixSvg,
   DockerSvg,
+  ChartSvg,
+  CandelstSvg,
+  GoalSvg,
 } from "@/app/svg/SvgIcons";
 import TinyBarChart from "./components/TinyBartChart";
 const Header = () => {
@@ -94,8 +97,8 @@ const Header = () => {
               We offer investment options from stocks to real,{"\n"} estate
               allowing you to grow your wealth efficiently.
             </p>
-            <div className="container relative my-10 flex w-full items-center justify-center px-10 s:px-1">
-              <div className="z-30 flex w-2/4 shrink items-center justify-between gap-4 rounded-lg bg-white px-2 py-5 s:flex-col xs:flex-row">
+            <div className="container relative mt-36 flex w-full items-center justify-center s:px-1">
+              <div className="z-30 flex w-2/4 shrink items-center justify-between gap-4 rounded-lg bg-white px-2 py-5 shadow-md s:flex-col xs:flex-row">
                 <div className="flex flex-col">
                   <p className="text-xs text-clrtitle s:text-[9px]">
                     General Investing Account
@@ -106,13 +109,11 @@ const Header = () => {
                 </div>
 
                 <div className="flex h-6 w-auto rounded-lg bg-bgtext">
-                  <div className="flex h-6 items-center rounded-lg bg-bgtext">
-                    {status === "deposit" && (
-                      <h1 className="px-2 text-xs leading-tight tracking-tight s:text-[9px]">
-                        Deposit
-                      </h1>
-                    )}
-                  </div>
+                  {status === "deposit" && (
+                    <h1 className="self-center px-2 text-xs leading-tight tracking-tight s:text-[9px]">
+                      Deposit
+                    </h1>
+                  )}
                   <AnimatePresence>
                     {status === "depositing" && (
                       <motion.div
@@ -143,8 +144,8 @@ const Header = () => {
                   </AnimatePresence>
                 </div>
               </div>
-              <div className="xxl:top-[74%] absolute left-1/2 top-[73%] z-10 w-[70%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-sm md:top-[75%]"></div>
-              <div className="absolute left-1/2 top-[70%] z-20 w-[75%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-sm md:top-[72%] lg:top-[72%]"></div>
+              <div className="absolute left-1/2 top-[70%] z-20 w-[45%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-[97%] md:top-[100%] lg:top-[103%]" />
+              <div className="absolute left-1/2 top-[100%] z-10 w-[40%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md md:top-[117%] lg:top-[108%]" />
             </div>
           </div>
         </div>
@@ -165,6 +166,54 @@ const Header = () => {
           </div>
           <div className="flex size-full shrink items-center justify-center">
             <TinyBarChart />
+          </div>
+        </div>
+      </div>
+      {/* Divider  */}
+      <div className="mt-16 h-[0.1px] w-full bg-[#546c4c]" />
+      {/* Investment Types */}
+      <h1 className="mt-10 whitespace-pre-line text-responsive-sm text-clrtitle">
+        Trinity offers a range of investment types that{"\n"} suit your
+        retirement goals.
+      </h1>
+      <div className="container mt-10 flex size-full flex-col gap-6 xl:flex-row">
+        <div className="flex size-full h-28 gap-4">
+          <div className="h-full w-[0.1px] bg-[#546c4c]" />
+          <div className="flex size-full flex-col justify-end">
+            <GoalSvg />
+            <h2 className="mt-2 font-medium text-clrtitle s:text-[14px] md:text-[16px]">
+              Goal-based Planning
+            </h2>
+            <p className="mt-3 text-[14px] text-clrparagraph s:text-[11px] md:text-[14px]">
+              Save and invest for your retirement years, ensuring a{"\n"}
+              comfortable lifestyle when you stop working.
+            </p>
+          </div>
+        </div>
+        <div className="flex size-full h-28 gap-4">
+          <div className="h-full w-[0.1px] bg-[#546c4c]" />
+          <div className="flex size-full flex-col justify-end">
+            <CandelstSvg />
+            <h2 className="mt-2 font-medium text-clrtitle s:text-[14px] md:text-[16px]">
+              Automated Rebalancing
+            </h2>
+            <p className="mt-3 text-[14px] text-clrparagraph s:text-[11px] md:text-[14px]">
+              Save and invest for your retirement years, ensuring a{"\n"}
+              comfortable lifestyle when you stop working.
+            </p>
+          </div>
+        </div>
+        <div className="flex size-full h-28 gap-4">
+          <div className="h-full w-[0.1px] bg-[#546c4c]" />
+          <div className="flex size-full flex-col justify-end">
+            <ChartSvg />
+            <h2 className="mt-2 font-medium text-clrtitle s:text-[14px] md:text-[16px]">
+              Retirement Income Projections
+            </h2>
+            <p className="mt-3 text-[14px] text-clrparagraph s:text-[11px] md:text-[14px]">
+              Save and invest for your retirement years, ensuring a{"\n"}
+              comfortable lifestyle when you stop working.
+            </p>
           </div>
         </div>
       </div>

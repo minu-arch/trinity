@@ -22,6 +22,7 @@ const config: Config = {
         xs: "420px",
       },
       fontSize: {
+        // "responsive-s": "clamp(0.3rem, 1vw, 1.2rem)",
         "responsive-xs": "clamp(0.5rem, 1.3vw, 1.7rem)",
         "responsive-sm": "clamp(1rem, 2vw, 2.5rem)",
         "responsive-md": "clamp(1.7rem, 3.5vw, 3rem)",
