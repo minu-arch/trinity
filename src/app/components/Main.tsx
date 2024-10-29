@@ -1,5 +1,12 @@
 import React from "react";
-import { ArrowUpSvg, CashSvg, CandeltSvg, TriangleSvg } from "../svg/SvgIcons";
+import {
+  ArrowUpSvg,
+  CashSvg,
+  CandeltSvg,
+  TriangleSvg,
+  SemiCircleSvg,
+  SquareSvg,
+} from "../svg/SvgIcons";
 
 const Main = () => {
   return (
@@ -127,13 +134,68 @@ const Main = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-6">
-          <div></div>
-          <div></div>
+        <div className="container mt-16 flex size-full shrink flex-col gap-10 xl:flex-row">
+          <div className="relative rounded-2xl bg-white s:px-6 xl:w-1/2">
+            <div className="image-rendering-pixelated absolute right-0 top-0 z-0">
+              <SemiCircleSvg className="size-2/3" />
+            </div>
+            <div className="relative z-10 mx-auto mt-20 flex max-w-screen-s shrink flex-col items-start justify-center rounded-t-2xl bg-colored p-4">
+              <h2>Portfolio</h2>
+            </div>
+          </div>
+          <div className="flex flex-col justify-start xl:w-1/2">
+            <h1 className="mb-5 text-xl font-medium text-clrtitle">
+              One-click Transactions
+            </h1>
+            <p className="text-clrparagraph">
+              Trinity's platform streamlines the investment process with
+              one-click transactions, allowing users to execute trades and
+              transactions quickly and efficiently. Whether buying stocks,
+              adjusting asset allocations, or making contributions to retirement
+              accounts.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-6">
-          <div></div>
-          <div></div>
+        <div className="container mt-16 flex size-full shrink flex-col gap-10 xl:flex-row">
+          <div className="relative overflow-hidden rounded-2xl bg-white s:px-6 xl:w-1/2">
+            <div className="absolute bottom-0 left-0 z-0 flex flex-col items-start justify-center">
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+            </div>
+            <div className="relative z-10 mx-auto mt-20 flex max-w-screen-s shrink flex-col items-start justify-center rounded-t-2xl bg-colored p-4">
+              <h2>Portfolio</h2>
+            </div>
+          </div>
+          <div className="flex flex-col justify-start xl:w-1/2">
+            <h1 className="mb-5 text-xl font-medium text-clrtitle">
+              One-click Transactions
+            </h1>
+            <p className="text-clrparagraph">
+              Trinity's platform streamlines the investment process with
+              one-click transactions, allowing users to execute trades and
+              transactions quickly and efficiently. Whether buying stocks,
+              adjusting asset allocations, or making contributions to retirement
+              accounts.
+            </p>
+          </div>
         </div>
       </div>
     </div>

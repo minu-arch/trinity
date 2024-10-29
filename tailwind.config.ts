@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      imageRendering: {
+        pixelated: "pixelated",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
