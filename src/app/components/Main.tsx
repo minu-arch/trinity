@@ -145,14 +145,14 @@ const Main = () => {
           </div>
           <div className="flex flex-col justify-start xl:w-1/2">
             <h1 className="mb-5 text-xl font-medium text-clrtitle">
-              One-click Transactions
+              Customizable Dashboard
             </h1>
             <p className="text-clrparagraph">
-              Trinity's platform streamlines the investment process with
-              one-click transactions, allowing users to execute trades and
-              transactions quickly and efficiently. Whether buying stocks,
-              adjusting asset allocations, or making contributions to retirement
-              accounts.
+              Trinity's platform offers a customizable dashboard that allows
+              users to personalize their experience based on their preferences
+              and priorities. Users can rearrange widgets, add or remove
+              modules, and tailor the dashboard layout to suit their individual
+              needs.
             </p>
           </div>
         </div>
@@ -186,14 +186,13 @@ const Main = () => {
           </div>
           <div className="flex flex-col justify-start xl:w-1/2">
             <h1 className="mb-5 text-xl font-medium text-clrtitle">
-              One-click Transactions
+              Real-Time Alerts & Notifications
             </h1>
             <p className="text-clrparagraph">
-              Trinity's platform streamlines the investment process with
-              one-click transactions, allowing users to execute trades and
-              transactions quickly and efficiently. Whether buying stocks,
-              adjusting asset allocations, or making contributions to retirement
-              accounts.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a
+              facilisis nulla. Fusce tincidunt ornare purus eget hendrerit.
+              Integer viverra nisl viverra mi placerat, a vestibulum justo
+              consectetur.
             </p>
           </div>
         </div>
