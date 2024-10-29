@@ -85,8 +85,8 @@ const Header = () => {
       </div>
       <div className="flex size-full flex-col gap-4 xl:flex-row">
         {/* Brokerage Account */}
-        <div className="relative flex size-full h-full min-h-[464px] flex-col">
-          <div className="relative flex flex-grow flex-col rounded-lg bg-colored pl-4 md:pl-10">
+        <div className="flex size-full min-h-[464px] flex-grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
+          <div className="relative flex flex-col rounded-lg bg-colored pl-4 md:pl-10">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               Brokerage Account
             </p>
@@ -152,7 +152,7 @@ const Header = () => {
 
         {/* IRA Account */}
         <div className="flex size-full min-h-[464px] flex-grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
-          <div className="flex flex-col items-start">
+          <div className="container flex flex-col items-start">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               IRA Account
             </p>
@@ -172,7 +172,7 @@ const Header = () => {
       {/* Divider  */}
       <div className="mt-16 h-[0.1px] w-full bg-[#546c4c]" />
       {/* Investment Types */}
-      <h1 className="mt-10 whitespace-pre-line text-responsive-sm text-clrtitle">
+      <h1 className="container mt-10 whitespace-pre-line text-xl text-clrtitle">
         Trinity offers a range of investment types that{"\n"} suit your
         retirement goals.
       </h1>

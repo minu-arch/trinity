@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       translate: {
         "custom-open": "-55%, 2%",
         "custom-closed": "-54%, -100%",
