@@ -142,7 +142,7 @@ const Article = () => {
                 financial details remain protected.
               </p>
             </div>
-            <div className="absolute bottom-20 hidden md:right-[-200px] md:block lg:top-[-100px] 2xl:right-[-200px]">
+            <div className="absolute bottom-20 hidden md:right-[-200px] md:block lg:top-[-100px] 2xl:right-[-200px] 2xl:top-12">
               <CircleSvg />
             </div>
           </div>
