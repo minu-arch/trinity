@@ -13,7 +13,7 @@ const Main = () => {
     <div className="mt-14 w-dvw bg-colored">
       <div className="container mb-16 flex flex-col">
         <div className="container mt-16 flex size-full shrink flex-col gap-10 xl:flex-row">
-          <div className="relative rounded-2xl bg-white s:px-6 xl:w-1/2">
+          <div className="relative overflow-hidden rounded-2xl bg-white s:px-6 xl:w-1/2">
             <div className="absolute right-0 top-0 z-0">
               <TriangleSvg />
             </div>
