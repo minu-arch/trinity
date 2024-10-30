@@ -6,6 +6,7 @@ import {
   BankSvg,
   LogoNav,
   FramerSvg,
+  CircleSvg,
 } from "../svg/SvgIcons";
 
 const Article = () => {
@@ -103,6 +104,46 @@ const Article = () => {
               <div className="flex items-center justify-center rounded-md border border-dashed border-neutral-500 bg-colored p-4">
                 <BankSvg />
               </div>
+            </div>
+          </div>
+        </div>
+        {/* Security is built in */}
+        <div className="relative mt-16 flex size-full min-h-[500px] flex-col justify-center gap-4 overflow-hidden rounded-xl bg-colored p-4">
+          <div className="flex flex-col items-start justify-center">
+            <h2 className="mb-10 text-xl font-medium text-clrtitle">
+              Security is built in, from the ground up.
+            </h2>
+            <p className="mb-5 whitespace-pre-line text-clrparagraph">
+              Our robust security measures are designed to protect your{"\n"}
+              sensitive data and give you peace of mind.
+            </p>
+          </div>
+          <div className="flex size-full flex-col items-start gap-10 xl:flex-row">
+            <div>
+              <h2 className="mb-5 text-xl font-medium text-clrtitle">
+                Bank-Level Encryption
+              </h2>
+              <p className="whitespace-pre-line text-clrparagraph">
+                With robust encryption protocols in place, your data is securely
+                {"\n"}
+                transmitted and stored, ensuring that your personal and{"\n"}
+                financial details remain protected.{"\n"}
+              </p>
+            </div>
+            <div className="hidden size-full h-28 w-px bg-neutral-500 xl:block" />
+            <div>
+              <h2 className="mb-5 text-xl font-medium text-clrtitle">
+                Bank-Level Encryption
+              </h2>
+              <p className="whitespace-pre-line text-clrparagraph">
+                With robust encryption protocols in place, {"\n"}
+                your data is securely transmitted and stored, ensuring that your
+                personal and{"\n"}
+                financial details remain protected.
+              </p>
+            </div>
+            <div className="absolute bottom-20 hidden md:right-[-200px] md:block lg:top-[-100px] 2xl:right-[-200px]">
+              <CircleSvg />
             </div>
           </div>
         </div>
