@@ -15,6 +15,7 @@ import {
   GoalSvg,
 } from "@/app/svg/SvgIcons";
 import TinyBarChart from "./components/TinyBartChart";
+import Button from "./components/Button";
 const Header = () => {
   const [status, setStatus] = useState("deposit");
 
@@ -46,9 +47,7 @@ const Header = () => {
             <p className="whitespace-pre-wrap break-words text-center text-responsive-xs text-clrnavbar">
               financial journey to success.
             </p>
-            <button className="mt-5 rounded-md border border-b-4 border-neutral-500 bg-neutral-200 px-2 py-1 text-[.8rem] font-bold text-green-700">
-              Get Started
-            </button>
+            <Button>Get Started</Button>
             <p className="mt-5 text-responsive-xs text-clrnavbar">
               Try for free
             </p>

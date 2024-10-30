@@ -10,28 +10,39 @@ interface FaqItem {
 
 const faqItems: FaqItem[] = [
   {
-    question: "What is included in my ticket?",
+    question: "What is Trinity Financial?",
     answer:
-      "Your ticket grants you access to both conference days, including talks, workshops, and the after-party on Tuesday, November 19th. Lunch, coffee, and snacks will be provided during the conference.",
+      "Trinity Financial is an innovative financial platform that offers personalized investment solutions and retirement planning services.",
   },
   {
-    question: "Will there be workshops or hands-on sessions?",
+    question: "How does Trinity Financial work?",
     answer:
-      "Yes, in addition to talks, we are offering interactive workshops where you can get hands-on experience with the latest AI tools and creative technologies. You will be notified via email with info about how to register for the workshops. Space in workshops is limited.",
+      "Trinity Financial provides users with tools to set financial goals, manage investments, and plan for retirement. Users can access educational resources, track their progress, and receive personalized recommendations.",
   },
   {
-    question: "How do I get to the venue?",
+    question: "Is Trinity Financial secure?",
     answer:
-      "The venue, Sohrlin, is easily accessible from Malaga's city center, with direct international connections via the Málaga Airport.",
+      "Yes, Trinity Financial prioritizes security and employs bank-level encryption to protect users' sensitive financial information. Additionally, the platform offers two-factor authentication for enhanced security.",
   },
   {
-    question: "Will there be any online live streaming of the event?",
-    answer: "No, not in this first edition so make it sure you are coming!",
+    question: "What investment options does Trinity Financial offer?",
+    answer:
+      "Trinity Financial offers a range of investment options, including stocks, bonds, mutual funds, ETFs, and retirement accounts like IRAs and 401(k)s.",
   },
   {
-    question: "Is there a refund policy for tickets?",
+    question: "Can I access Trinity Financial on my mobile device?",
     answer:
-      "Yes, refunds are available up to 30 days before the event. For full terms, please check our ticketing policy.",
+      "Yes, Trinity Financial is optimized for mobile devices, allowing users to access their accounts, track investments, and manage portfolios on the go.",
+  },
+  {
+    question: "How does Trinity Financial help with retirement planning?",
+    answer:
+      "Trinity Financial offers tools and resources to help users set retirement goals, optimize savings strategies, and create personalized retirement plans tailored to their needs and preferences.",
+  },
+  {
+    question: "Does Trinity Financial provide financial advice?",
+    answer:
+      "While Trinity Financial offers educational resources and personalized recommendations, it does not provide personalized financial advice. Users should consult with a financial advisor for individualized guidance.",
   },
 ];
 
@@ -47,7 +58,7 @@ const FaqItem: React.FC<FaqItem & { isOpen: boolean; toggle: () => void }> = ({
         className="flex w-full items-center justify-between"
         onClick={toggle}
       >
-        <span className="text-xl font-semibold uppercase tracking-tighter text-clrtitle">
+        <span className="text-sm font-medium tracking-tighter text-clrtitle">
           {question}
         </span>
         <span
@@ -56,8 +67,9 @@ const FaqItem: React.FC<FaqItem & { isOpen: boolean; toggle: () => void }> = ({
           +
         </span>
       </button>
+      <div className="size-full h-px bg-neutral-500" />
       <div
-        className={`mb-5 mt-2 overflow-hidden text-clrparagraph transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+        className={`mb-5 mt-2 overflow-hidden text-sm text-clrparagraph transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
       >
         {answer}
         {question === "Is there a refund policy for tickets?" && (

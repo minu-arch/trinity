@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LogoNav } from "@/app/svg/SvgIcons";
+import Button from "./components/Button";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +38,7 @@ const NavBar = () => {
             <p>Features</p>
             <p>Faq</p>
             <p>Log In</p>
-            <button className="rounded-md border border-b-4 border-neutral-500 bg-neutral-200 px-6 py-1">
-              My Template
-            </button>
+            <Button>My Template</Button>
           </div>
         )}
       </div>
