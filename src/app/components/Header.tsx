@@ -74,25 +74,25 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="w-full">
-        <p className="my-10 whitespace-pre-line text-center text-responsive-md uppercase leading-tight tracking-tighter text-clrtitle">
+      <div className="mb-10 w-full">
+        <p className="my-10 whitespace-pre-line text-center text-4xl leading-tight tracking-tighter text-clrtitle">
           Works for you,{"\n"}not against.
         </p>
-        <p className="-mt-10 text-center text-responsive-sm text-clrnavbar">
+        <p className="-mt-10 text-center text-xl text-clrnavbar">
           Investing plans that meet all your needs.
         </p>
       </div>
-      <div className="flex size-full flex-col gap-4 xl:flex-row">
+      <div className="flex size-full flex-1 flex-col gap-4 xl:flex-row">
         {/* Brokerage Account */}
-        <div className="flex size-full min-h-[464px] flex-grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
-          <div className="relative flex flex-col rounded-lg bg-colored pl-4 md:pl-10">
+        <div className="flex size-full min-h-[464px] flex-grow flex-col rounded-lg bg-colored text-clrtitle md:pl-10">
+          <div className="relative flex flex-col rounded-lg bg-colored pl-4">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               Brokerage Account
             </p>
-            <h1 className="text-responsive-sm text-clrtitle">
+            <h1 className="text-lg text-clrtitle">
               General Investing General Investing
             </h1>
-            <p className="text-responsive-xs text-clrnavbar md:whitespace-pre-line">
+            <p className="text-sm text-clrnavbar md:whitespace-pre-line">
               We offer investment options from stocks to real,{"\n"} estate
               allowing you to grow your wealth efficiently.
             </p>
@@ -155,10 +155,8 @@ const Header = () => {
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               IRA Account
             </p>
-            <h1 className="text-responsive-sm text-clrtitle">
-              Retirement Investing
-            </h1>
-            <p className="text-responsive-xs text-clrnavbar md:whitespace-pre-line">
+            <h1 className="text-lg text-clrtitle">Retirement Investing</h1>
+            <p className="text-sm text-clrnavbar md:whitespace-pre-line">
               Save and invest for your retirement years, ensuring a{"\n"}
               comfortable lifestyle when you stop working.
             </p>
