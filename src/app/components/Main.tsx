@@ -135,12 +135,67 @@ const Main = () => {
           </div>
         </div>
         <div className="container mt-16 flex size-full shrink flex-col gap-10 xl:flex-row">
-          <div className="relative rounded-2xl bg-white s:px-6 xl:w-1/2">
+          <div className="relative overflow-hidden rounded-2xl bg-white s:px-6 xl:w-1/2">
             <div className="image-rendering-pixelated absolute right-0 top-0 z-0">
               <SemiCircleSvg className="size-2/3" />
             </div>
-            <div className="relative z-10 mx-auto mt-20 flex max-w-screen-s shrink flex-col items-start justify-center rounded-t-2xl bg-colored p-4">
-              <h2>Portfolio</h2>
+            {/* Customizable Dashboard */}
+            <div className="z-10 mx-auto mt-20 flex max-w-screen-md shrink translate-x-40 translate-y-10 flex-col items-start justify-center rounded-t-2xl bg-colored p-4">
+              {/* Summary */}
+              <div className="flex size-full flex-col gap-4">
+                <div className="flex size-full flex-1 flex-row gap-2">
+                  <div className="flex size-full flex-col items-start justify-center rounded-md bg-white p-6">
+                    <h2 className="text-[.8rem] font-medium">Summary</h2>
+                    <div className="mt-6 flex size-full items-center justify-between">
+                      <h3 className="text-[.6rem] font-medium">Total Value</h3>
+                      <p className="text-[.6rem] font-medium">$12,650.27</p>
+                    </div>
+                    <div className="my-3 flex h-2 w-full">
+                      <div className="h-full w-[30%] rounded-l-full bg-[#decf99]"></div>
+                      <div className="h-full w-[70%] rounded-r-full bg-clrnavbar"></div>
+                    </div>
+                    <div className="mb-4 flex size-full items-center justify-between">
+                      <div className="flex items-center justify-center gap-2">
+                        <div className="size-2 rounded-full bg-blue-600" />
+                        <h2 className="text-[.6rem] font-medium">Cash</h2>
+                      </div>
+                      <h2 className="text-[.6rem] font-medium">30%</h2>
+                    </div>
+                    <div className="mb-4 flex size-full items-center justify-between">
+                      <div className="flex items-center justify-center gap-2">
+                        <div className="size-2 rounded-full bg-green-600" />
+                        <h2 className="text-[.6rem] font-medium">
+                          Investments
+                        </h2>
+                      </div>
+                      <h2 className="text-[.6rem] font-medium">70%</h2>
+                    </div>
+                    <div className="flex size-full items-center justify-between">
+                      <div className="flex items-center justify-center gap-2">
+                        <div className="size-2 rounded-full bg-sky-800" />
+                        <h2 className="text-[.6rem] font-medium">Debt</h2>
+                      </div>
+                      <h2 className="text-[.6rem] font-medium">0%</h2>
+                    </div>
+
+                    <div className="mt-5 h-[1px] w-full bg-gray-300" />
+                    <div className="mt-5 flex size-full items-center justify-between">
+                      <h2 className="text-[.6rem] font-medium">Day Change</h2>
+                      <h2 className="text-[.6rem] font-medium text-green-500">
+                        +$135.50 (0.50%)
+                      </h2>
+                    </div>
+                    <button className="mt-5 w-full cursor-text rounded-md border-[.5px] border-gray-400 bg-transparent p-2 text-[.6rem] font-medium text-gray-500">
+                      View Statements
+                    </button>
+                  </div>
+                  <div className="flex size-full min-h-[320px] flex-col items-start justify-center rounded-md bg-white p-6" />
+                </div>
+                <div className="flex size-full flex-row gap-2">
+                  <div className="flex size-full flex-col items-start justify-center rounded-md bg-white p-6" />
+                  <div className="flex size-full flex-col items-start justify-center rounded-md bg-white p-6" />
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-start xl:w-1/2">
@@ -181,7 +236,9 @@ const Main = () => {
               </div>
             </div>
             <div className="relative z-10 mx-auto mt-20 flex max-w-screen-s shrink flex-col items-start justify-center rounded-t-2xl bg-colored p-4">
-              <h2>Portfolio</h2>
+              <div className="rounded-xl bg-white p-2">
+                <h2>Portfolio</h2>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-start xl:w-1/2">
