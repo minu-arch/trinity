@@ -144,7 +144,7 @@ const Header = () => {
                 </div>
               </div>
               <div className="absolute left-1/2 top-[70%] z-20 w-[45%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-[97%] md:top-[100%] lg:top-[103%]" />
-              <div className="absolute left-1/2 top-[100%] z-10 w-[40%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md md:top-[117%] lg:top-[108%]" />
+              <div className="absolute left-1/2 top-[100%] z-10 w-[40%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-[100%] xs:top-[103%] md:top-[110%] lg:top-[117%]" />
             </div>
           </div>
         </div>
