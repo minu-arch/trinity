@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowUpSvg, LinkedinSvg, LogoNav, XtwitterSvg } from "../svg/SvgIcons";
 import { Input } from "@/components/ui/input";
+import BtnFixed from "./components/BtnFixed";
 
 const Footer = () => {
   return (
@@ -44,6 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <BtnFixed />
     </div>
   );
 };

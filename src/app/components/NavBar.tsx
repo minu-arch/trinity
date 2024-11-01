@@ -38,7 +38,7 @@ const NavBar = () => {
             <p>Features</p>
             <p>Faq</p>
             <p>Log In</p>
-            <Button className="mt-1">My Template</Button>
+            <Button className="!mt-1">My Template</Button>
           </div>
         )}
       </div>
