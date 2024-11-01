@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -37,9 +38,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppinsSans.variable} font-poppins overflow-x-hidden antialiased`}
+        className={`${poppinsSans.variable} overflow-x-hidden font-poppins antialiased`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
