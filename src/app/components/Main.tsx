@@ -52,7 +52,7 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-5 h-[1px] w-full bg-gray-300" />
+              <div className="mt-5 h-px w-full bg-gray-300" />
               <div className="mt-5 flex size-full items-start gap-4">
                 <div className="self-center">
                   <CashSvg className="size-10" />
@@ -74,7 +74,7 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-5 h-[1px] w-full bg-gray-300" />
+              <div className="mt-5 h-px w-full bg-gray-300" />
               <div className="mt-5 flex size-full items-start gap-4">
                 <div className="self-center">
                   <CashSvg className="size-10" />
@@ -96,7 +96,7 @@ const Main = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-5 h-[1px] w-full bg-gray-300" />
+              <div className="mt-5 h-px w-full bg-gray-300" />
               <div className="mt-5 flex size-full items-start gap-4">
                 <div className="self-center">
                   <CashSvg className="size-10" />
@@ -179,7 +179,7 @@ const Main = () => {
                       <h2 className="text-[.6rem] font-medium">0%</h2>
                     </div>
 
-                    <div className="mt-5 h-[1px] w-full bg-gray-300" />
+                    <div className="mt-5 h-px w-full bg-gray-300" />
                     <div className="mt-5 flex size-full items-center justify-between">
                       <h2 className="text-[.6rem] font-medium">Day Change</h2>
                       <h2 className="text-[.6rem] font-medium text-green-500">
@@ -204,7 +204,7 @@ const Main = () => {
               Customizable Dashboard
             </h1>
             <p className="text-clrparagraph">
-              Trinity's platform offers a customizable dashboard that allows
+              Trinity`s platform offers a customizable dashboard that allows
               users to personalize their experience based on their preferences
               and priorities. Users can rearrange widgets, add or remove
               modules, and tailor the dashboard layout to suit their individual
@@ -309,7 +309,7 @@ const Main = () => {
 
                   {/* Chart Area */}
                   <div className="ml-8 h-full w-[calc(100%-2rem)] sm:ml-10 sm:w-[calc(100%-2.5rem)]">
-                    <ChartGraphSvg className="h-full w-full" />
+                    <ChartGraphSvg className="size-full" />
                   </div>
 
                   {/* X-axis labels */}

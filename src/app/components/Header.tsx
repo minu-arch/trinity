@@ -84,7 +84,7 @@ const Header = () => {
       </div>
       <div className="flex size-full flex-1 flex-col gap-4 xl:flex-row">
         {/* Brokerage Account */}
-        <div className="flex size-full min-h-[464px] flex-grow flex-col rounded-lg bg-colored text-clrtitle md:pl-10">
+        <div className="flex size-full min-h-[464px] grow flex-col rounded-lg bg-colored text-clrtitle md:pl-10">
           <div className="relative flex flex-col rounded-lg bg-colored pl-4">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               Brokerage Account
@@ -143,14 +143,14 @@ const Header = () => {
                   </AnimatePresence>
                 </div>
               </div>
-              <div className="absolute left-1/2 top-[70%] z-20 w-[45%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-[97%] md:top-[100%] lg:top-[103%]" />
-              <div className="absolute left-1/2 top-[100%] z-10 w-[40%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-[100%] xs:top-[103%] md:top-[110%] lg:top-[117%]" />
+              <div className="absolute left-1/2 top-[70%] z-20 w-[45%] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-[97%] md:top-full lg:top-[103%]" />
+              <div className="absolute left-1/2 top-full z-10 w-2/5 -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-full xs:top-[103%] md:top-[110%] lg:top-[117%]" />
             </div>
           </div>
         </div>
 
         {/* IRA Account */}
-        <div className="flex size-full min-h-[464px] flex-grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
+        <div className="flex size-full min-h-[464px] grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
           <div className="container flex flex-col items-start">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               IRA Account
