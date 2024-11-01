@@ -127,7 +127,7 @@ const Main = () => {
               One-click Transactions
             </h1>
             <p className="text-clrparagraph">
-              Trinity's platform streamlines the investment process with
+              Trinity`s platform streamlines the investment process with
               one-click transactions, allowing users to execute trades and
               transactions quickly and efficiently. Whether buying stocks,
               adjusting asset allocations, or making contributions to retirement

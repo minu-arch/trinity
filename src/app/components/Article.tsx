@@ -28,7 +28,7 @@ const Article = () => {
               <ElasticSvg />
             </div>
             <div className="mt-10 flex flex-col justify-center">
-              <h2>"Its the greatest investment we've made in our employees"</h2>
+              <h2>Its the greatest investment we've made in our employees</h2>
               <p>
                 By integrating Trinity into our benefits package, our team has
                 gained invaluable tools for managing their finances and planning
