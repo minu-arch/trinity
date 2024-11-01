@@ -6,6 +6,7 @@ import {
   TriangleSvg,
   SemiCircleSvg,
   SquareSvg,
+  ChartGraphSvg,
 } from "../svg/SvgIcons";
 
 const Main = () => {
@@ -136,15 +137,15 @@ const Main = () => {
         </div>
         <div className="container mt-16 flex size-full shrink flex-col gap-10 xl:flex-row">
           <div className="relative overflow-hidden rounded-2xl bg-white s:px-6 xl:w-1/2">
-            <div className="image-rendering-pixelated absolute right-0 top-0 z-0">
-              <SemiCircleSvg className="size-2/3" />
+            <div className="absolute right-0 top-20 z-0 size-full">
+              <SemiCircleSvg />
             </div>
             {/* Customizable Dashboard */}
-            <div className="z-10 mx-auto mt-20 flex max-w-screen-md shrink translate-x-40 translate-y-10 flex-col items-start justify-center rounded-t-2xl bg-colored p-4">
+            <div className="z-10 mx-auto mt-20 flex shrink translate-x-10 flex-col items-start justify-center rounded-t-2xl bg-colored p-4 s:translate-y-24 xs:translate-y-10 md:max-w-screen-md md:translate-x-36 lg:translate-x-56">
               {/* Summary */}
               <div className="flex size-full flex-col gap-4">
-                <div className="flex size-full flex-1 flex-row gap-2">
-                  <div className="flex size-full flex-col items-start justify-center rounded-md bg-white p-6">
+                <div className="flex size-full flex-1 flex-row gap-4">
+                  <div className="flex size-full flex-col items-start justify-center rounded-md bg-white p-6 s:min-h-[361px] xs:min-h-[321px] lg:min-h-[321px] xl:min-h-[321px]">
                     <h2 className="text-[.8rem] font-medium">Summary</h2>
                     <div className="mt-6 flex size-full items-center justify-between">
                       <h3 className="text-[.6rem] font-medium">Total Value</h3>
@@ -189,9 +190,9 @@ const Main = () => {
                       View Statements
                     </button>
                   </div>
-                  <div className="flex size-full min-h-[320px] flex-col items-start justify-center rounded-md bg-white p-6" />
+                  <div className="size-full min-h-[361px] flex-col items-start justify-center rounded-md bg-white p-6 s:hidden s:min-h-[361px] xs:min-h-[321px] md:flex lg:min-h-[321px] xl:min-h-[321px]" />
                 </div>
-                <div className="flex size-full flex-row gap-2">
+                <div className="flex size-full flex-row gap-4">
                   <div className="flex size-full flex-col items-start justify-center rounded-md bg-white p-6" />
                   <div className="flex size-full flex-col items-start justify-center rounded-md bg-white p-6" />
                 </div>
@@ -213,7 +214,52 @@ const Main = () => {
         </div>
         <div className="container mt-16 flex size-full shrink flex-col gap-10 xl:flex-row">
           <div className="relative overflow-hidden rounded-2xl bg-white s:px-6 xl:w-1/2">
-            <div className="absolute bottom-0 left-0 z-0 flex flex-col items-start justify-center">
+            <div className="absolute left-0 top-0 z-0 flex flex-col items-start justify-center">
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
+              <div className="flex">
+                <SquareSvg />
+                <SquareSvg />
+                <SquareSvg />
+              </div>
               <div className="flex">
                 <SquareSvg />
                 <SquareSvg />
@@ -235,9 +281,53 @@ const Main = () => {
                 <SquareSvg />
               </div>
             </div>
-            <div className="relative z-10 mx-auto mt-20 flex max-w-screen-s shrink flex-col items-start justify-center rounded-t-2xl bg-colored p-4">
-              <div className="rounded-xl bg-white p-2">
-                <h2>Portfolio</h2>
+            <div className="relative z-10 mx-auto my-10 flex w-full max-w-screen-xs flex-col items-start justify-center overflow-hidden rounded-2xl bg-colored p-4 s:p-2 sm:p-6">
+              <div className="flex w-full flex-col">
+                {/* Header */}
+                <div className="mb-4">
+                  <h2 className="text-sm font-medium">Brokerage Account</h2>
+                  <div className="flex items-center gap-2">
+                    <span className="text-base font-semibold sm:text-xl">
+                      $12,650.27
+                    </span>
+                    <span className="text-xs text-green-500 sm:text-sm">
+                      $201.28 (+12.3%)
+                    </span>
+                  </div>
+                </div>
+
+                {/* Chart Container */}
+                <div className="relative h-[200px] w-full sm:h-[250px] md:h-[300px]">
+                  {/* Y-axis labels */}
+                  <div className="absolute left-0 flex h-full flex-col justify-between text-[10px] text-gray-500 sm:text-xs">
+                    <span>1000</span>
+                    <span>750</span>
+                    <span>500</span>
+                    <span>250</span>
+                    <span>0</span>
+                  </div>
+
+                  {/* Chart Area */}
+                  <div className="ml-8 h-full w-[calc(100%-2rem)] sm:ml-10 sm:w-[calc(100%-2.5rem)]">
+                    <ChartGraphSvg className="h-full w-full" />
+                  </div>
+
+                  {/* X-axis labels */}
+                  <div className="absolute bottom-0 left-8 right-0 flex justify-between text-[8px] text-gray-500 sm:left-10 sm:text-xs">
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+                    <span>Nov</span>
+                    <span>Dec</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

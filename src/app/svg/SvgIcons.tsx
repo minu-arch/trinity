@@ -31,14 +31,8 @@ export function FedEx(props: React.SVGProps<SVGSVGElement>) {
     >
       <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop
-            offset="0%"
-            style={{ stopColor: "rgb(0,0,0)", stopOpacity: 0.1 }}
-          />
-          <stop
-            offset="100%"
-            style={{ stopColor: "rgb(0,0,0)", stopOpacity: 1 }}
-          />
+          <stop offset="0%" stopColor="rgb(0,0,0)" stopOpacity={0.1} />
+          <stop offset="100%" stopColor="rgb(0,0,0)" stopOpacity={1} />
         </linearGradient>
       </defs>
       <path
@@ -625,7 +619,7 @@ export function BankSvg(props: React.SVGProps<SVGSVGElement>) {
         />
       </g>
       <defs>
-        <clipPath id="svg-915109711_1709_clip0_116_157">
+        <clipPath>
           <rect width="38" height="38" fill="white" />
         </clipPath>
       </defs>
@@ -650,7 +644,7 @@ export function FramerSvg(props: React.SVGProps<SVGSVGElement>) {
         />
       </g>
       <defs>
-        <clipPath id="svg705508024_537_clip0_116_233">
+        <clipPath>
           <rect
             width="40.1762"
             height="40.1762"
@@ -702,6 +696,7 @@ export function XtwitterSvg(props: React.SVGProps<SVGSVGElement>) {
 export function LinkedinSvg(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
+      {...props}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -712,6 +707,69 @@ export function LinkedinSvg(props: React.SVGProps<SVGSVGElement>) {
         d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"
         fill="#1D3D14"
       />
+    </svg>
+  );
+}
+export function ChartGraphSvg(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      width="522"
+      height="123"
+      viewBox="0 0 522 123"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.159668 3.9082H521.725"
+        stroke="#EDEDED"
+        strokeWidth="0.584546"
+        strokeDasharray="2.34 2.34"
+      />
+      <path
+        d="M0.159668 32.4404H521.725"
+        stroke="#EDEDED"
+        strokeWidth="0.584546"
+        strokeDasharray="2.34 2.34"
+      />
+      <path
+        d="M0.159668 60.9727H521.725"
+        stroke="#EDEDED"
+        strokeWidth="0.584546"
+        strokeDasharray="2.34 2.34"
+      />
+      <path
+        d="M0.159668 89.5049H521.725"
+        stroke="#EDEDED"
+        strokeWidth="0.584546"
+        strokeDasharray="2.34 2.34"
+      />
+      <path
+        d="M0.159668 118.037H521.725"
+        stroke="#EDEDED"
+        strokeWidth="0.584546"
+      />
+      <path
+        d="M0.159668 61.7398C0.159668 61.7398 101.888 81.3981 139.153 78.7663C176.418 76.1346 219.473 44.813 260.037 37.0806C300.6 29.3483 339.478 33.0407 382.731 27.3931C425.984 21.7455 521.725 3.9082 521.725 3.9082"
+        stroke="#719267"
+      />
+      <path
+        d="M139.153 78.4296C99.8851 81.5471 0.159668 61.7063 0.159668 61.7063V118.038H521.725V3.9082C521.725 3.9082 425.183 21.7592 382.731 27.3795C340.279 32.9999 298.197 29.6605 260.037 37.0614C221.877 44.4624 178.421 75.3122 139.153 78.4296Z"
+        fill="url(#svg-889909105_1397_paint0_linear_92_1136)"
+      />
+      <defs>
+        <linearGradient
+          id="svg-889909105_1397_paint0_linear_92_1136"
+          x1="244.643"
+          y1="35.5945"
+          x2="247.31"
+          y2="108.783"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#719267" stopOpacity="0.1" />
+          <stop offset="1" stopColor="#719267" stopOpacity="0" />
+        </linearGradient>
+      </defs>
     </svg>
   );
 }
