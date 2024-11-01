@@ -345,6 +345,7 @@ export function TriangleSvg(props: React.SVGProps<SVGSVGElement>) {
 export function SemiCircleSvg(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
+      {...props}
       width="100%"
       height="100%"
       viewBox="0 0 593 170"
