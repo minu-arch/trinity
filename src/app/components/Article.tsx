@@ -8,7 +8,7 @@ import {
   FramerSvg,
   CircleSvg,
 } from "../svg/SvgIcons";
-
+import { Marquee } from "@/components/ui/Marquee";
 const Article = () => {
   return (
     <div className="my-5">
@@ -76,20 +76,29 @@ const Article = () => {
             </div>
             <div className="hidden items-center justify-between gap-4 lg:flex">
               <div className="flex flex-col items-center justify-center gap-4">
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
+                <Marquee pauseOnHover vertical className="[--duration:20s]">
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                </Marquee>
               </div>
               <div className="flex flex-col items-center justify-center gap-4">
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
-                <FramerSvg />
+                <Marquee
+                  reverse
+                  pauseOnHover
+                  vertical
+                  className="[--duration:20s]"
+                >
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                  <FramerSvg />
+                </Marquee>
               </div>
             </div>
             <div className="xl:top-50 absolute bottom-0 flex justify-between gap-4 rounded-xl bg-white p-4 lg:hidden xl:bottom-52 xl:right-0 xl:flex">

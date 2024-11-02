@@ -16,6 +16,8 @@ import {
 } from "@/app/svg/SvgIcons";
 import TinyBarChart from "./components/TinyBartChart";
 import Button from "./components/Button";
+import BlurIn from "@/components/ui/BlurIn";
+
 const Header = () => {
   const [status, setStatus] = useState("deposit");
 
@@ -38,9 +40,11 @@ const Header = () => {
       <div className="flex items-center justify-center rounded-2xl bg-colored">
         <div className="flex size-full flex-col p-2">
           <div className="mt-10 flex size-full flex-col items-center justify-center px-2 text-clrtitle md:px-10">
-            <h1 className="text-center text-responsive-md">
-              Retirement investing made simple
-            </h1>
+            <BlurIn
+              className="!text-center !text-responsive-md"
+              word="Retirement investing made simple"
+            />
+
             <p className="mt-5 whitespace-pre-wrap break-words text-center text-responsive-xs text-clrnavbar">
               Explore the next frontier of tools to kickstart your
             </p>

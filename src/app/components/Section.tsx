@@ -2,6 +2,7 @@ import React from "react";
 import Faq from "./components/Faq";
 import Button from "./components/Button";
 import Image from "next/image";
+import { BoxReveal } from "@/components/ui/BoxReveal";
 const Section = () => {
   return (
     <div className="container mb-16">
@@ -22,15 +23,21 @@ const Section = () => {
       {/* Trinity Financial */}
       <div className="mt-16 flex size-full flex-1 flex-col gap-4 xl:flex-row">
         <div className="flex min-h-[500px] w-full flex-col items-start gap-10 rounded-xl bg-colored p-4">
-          <h1 className="mt-24 whitespace-pre-line text-3xl font-medium text-clrtitle">
-            Start investing with{"\n"} Trinity Financial Today
-          </h1>
+          <BoxReveal boxColor={"#366740"} duration={0.5}>
+            <h1 className="mt-24 whitespace-pre-line text-3xl font-medium text-clrtitle">
+              Start investing with{"\n"} Trinity Financial Today
+            </h1>
+          </BoxReveal>
           <div className="mt-16 flex flex-col items-start gap-4">
-            <Button>Purchase Template</Button>
-            <p className="text-clrparagraph md:whitespace-pre-line">
-              We offer a variety of flexible services that cater to all{"\n"}{" "}
-              types of needs and wants.
-            </p>
+            <BoxReveal boxColor={"#366740"} duration={0.5}>
+              <Button>Purchase Template</Button>
+            </BoxReveal>
+            <BoxReveal boxColor={"#366740"} duration={0.5}>
+              <p className="text-clrparagraph md:whitespace-pre-line">
+                We offer a variety of flexible services that cater to all{"\n"}{" "}
+                types of needs and wants.
+              </p>
+            </BoxReveal>
           </div>
         </div>
         <div className="flex min-h-[500px] w-full items-center justify-center rounded-xl bg-colorgreen p-4">
