@@ -78,13 +78,13 @@ const Header = () => {
             </p>
             <div className="size-full">
               <Marquee className="[--duration:20s]">
-                <SvgImg />
-                <VitalSvg className="mt-4 size-16" fill="#B9BBC1" />
-                <HarmonySvg className="size-24" />
-                <ElasticSvg className="size-24" fill="#B9BBC1" />
-                <TerraSvg className="mt-4 size-16" />
-                <SageSvg className="mt-4 size-16" />
-                <EchoSvg className="mt-4 size-16" />
+                <SvgImg className="size-16 s:size-32" />
+                <VitalSvg className="mt-4 size-16 s:size-24" fill="#B9BBC1" />
+                <HarmonySvg className="size-24 s:size-32" />
+                <ElasticSvg className="size-24 s:size-32" fill="#B9BBC1" />
+                <TerraSvg className="mt-4 size-16 s:size-24" />
+                <SageSvg className="mt-4 size-16 s:size-24" />
+                <EchoSvg className="mt-4 size-16 s:size-24" />
               </Marquee>
             </div>
           </div>

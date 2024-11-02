@@ -4,12 +4,37 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LogoNav } from "@/app/svg/SvgIcons";
 import Button from "./components/Button";
+import { motion, AnimatePresence } from "framer-motion";
+import { FadeText } from "@/components/ui/FadeText";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const menuVariants = {
+    initial: {
+      opacity: 0,
+      y: -20,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.2,
+        ease: "easeIn",
+      },
+    },
   };
 
   return (
@@ -32,15 +57,47 @@ const NavBar = () => {
           </div>
         </div>
 
-        {isOpen && (
-          <div className="mt-4 flex h-screen flex-col items-start gap-2 md:hidden">
-            <p>Investment</p>
-            <p>Features</p>
-            <p>Faq</p>
-            <p>Log In</p>
-            <Button className="!mt-1">My Template</Button>
-          </div>
-        )}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              variants={menuVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="mt-4 flex h-screen flex-col items-start gap-2 md:hidden"
+            >
+              <FadeText
+                text="Investment"
+                direction="up"
+                framerProps={{
+                  show: { transition: { delay: 0.2 } },
+                }}
+              />
+              <FadeText
+                text="Features"
+                direction="up"
+                framerProps={{
+                  show: { transition: { delay: 0.4 } },
+                }}
+              />
+              <FadeText
+                text="Faq"
+                direction="up"
+                framerProps={{
+                  show: { transition: { delay: 0.6 } },
+                }}
+              />
+              <FadeText
+                text="Log In"
+                direction="up"
+                framerProps={{
+                  show: { transition: { delay: 0.8 } },
+                }}
+              />
+              <Button className="!mt-1">My Template</Button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
