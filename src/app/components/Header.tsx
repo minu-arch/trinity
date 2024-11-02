@@ -13,10 +13,19 @@ import {
   ChartSvg,
   CandelstSvg,
   GoalSvg,
+  SvgImg,
+  HarmonySvg,
+  ElasticSvg,
+  TerraSvg,
+  SageSvg,
+  EchoSvg,
+  HavenSvg,
+  VitalSvg,
 } from "@/app/svg/SvgIcons";
 import TinyBarChart from "./components/TinyBartChart";
 import Button from "./components/Button";
 import BlurIn from "@/components/ui/BlurIn";
+import { Marquee } from "@/components/ui/Marquee";
 
 const Header = () => {
   const [status, setStatus] = useState("deposit");
@@ -67,13 +76,16 @@ const Header = () => {
             <p className="mt-5 text-responsive-xs text-clrnavbar">
               Powering the world’s best teams
             </p>
-            <div className="mt-5 flex w-full items-center justify-between gap-2">
-              <FedEx />
-              <WixSvg />
-              <UpsSvg />
-              <GachaClub />
-              <NetflixSvg />
-              <DockerSvg />
+            <div className="size-full">
+              <Marquee className="[--duration:20s]">
+                <SvgImg />
+                <VitalSvg className="mt-4 size-16" fill="#B9BBC1" />
+                <HarmonySvg className="size-24" />
+                <ElasticSvg className="size-24" fill="#B9BBC1" />
+                <TerraSvg className="mt-4 size-16" />
+                <SageSvg className="mt-4 size-16" />
+                <EchoSvg className="mt-4 size-16" />
+              </Marquee>
             </div>
           </div>
         </div>

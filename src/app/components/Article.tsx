@@ -76,7 +76,7 @@ const Article = () => {
             </div>
             <div className="hidden items-center justify-between gap-4 lg:flex">
               <div className="flex flex-col items-center justify-center gap-4">
-                <Marquee pauseOnHover vertical className="[--duration:20s]">
+                <Marquee vertical className="[--duration:20s]">
                   <FramerSvg />
                   <FramerSvg />
                   <FramerSvg />
@@ -86,12 +86,7 @@ const Article = () => {
                 </Marquee>
               </div>
               <div className="flex flex-col items-center justify-center gap-4">
-                <Marquee
-                  reverse
-                  pauseOnHover
-                  vertical
-                  className="[--duration:20s]"
-                >
+                <Marquee reverse vertical className="[--duration:20s]">
                   <FramerSvg />
                   <FramerSvg />
                   <FramerSvg />

@@ -40,7 +40,7 @@ export function Marquee({
             className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
               "animate-marquee w-full flex-row": !vertical,
               "animate-marquee-vertical h-full flex-col": vertical,
-              //   "group-hover:[animation-play-state:paused]": pauseOnHover, // if you want to pause on hover
+              "group-hover:[animation-play-state:paused]": pauseOnHover, // if you want to pause on hover
             })}
           >
             {children}
