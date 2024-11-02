@@ -124,34 +124,45 @@ const Header = () => {
                 </div>
 
                 <div className="flex h-6 w-auto rounded-lg bg-bgtext">
-                  {status === "deposit" && (
-                    <h1 className="self-center px-2 text-xs leading-tight tracking-tight s:text-[9px]">
-                      Deposit
-                    </h1>
-                  )}
-                  <AnimatePresence>
+                  <AnimatePresence mode="wait">
+                    {status === "deposit" && (
+                      <motion.div
+                        key="deposit"
+                        className="flex h-6 items-center justify-center rounded-lg px-2"
+                        initial={{ opacity: 0, width: "auto" }}
+                        animate={{ opacity: 1, width: "auto" }}
+                        exit={{ opacity: 0, width: "auto" }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      >
+                        <p className="whitespace-nowrap text-xs leading-tight tracking-tight s:text-[9px]">
+                          Deposit
+                        </p>
+                      </motion.div>
+                    )}
                     {status === "depositing" && (
                       <motion.div
-                        className="mx-auto flex h-6 items-center justify-center rounded-lg bg-colorgreen px-2 text-xs text-white"
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        key="depositing"
+                        className="flex h-6 items-center justify-center rounded-lg bg-colorgreen px-2 text-white"
+                        initial={{ opacity: 0, y: -10, width: "auto" }}
+                        animate={{ opacity: 1, y: 0, width: "auto" }}
+                        exit={{ opacity: 0, y: 10, width: "auto" }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
                       >
-                        <p className="text-xs leading-tight tracking-tight s:text-[9px]">
+                        <p className="whitespace-nowrap text-xs leading-tight tracking-tight s:text-[9px]">
                           Depositing
                         </p>
                       </motion.div>
                     )}
                     {status === "successful" && (
                       <motion.div
-                        className="mx-auto flex h-6 items-center justify-center rounded-lg bg-colorgreen px-2 text-xs text-white"
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 0 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        key="successful"
+                        className="flex h-6 items-center justify-center rounded-lg bg-colorgreen px-2 text-white"
+                        initial={{ opacity: 0, y: -10, width: "auto" }}
+                        animate={{ opacity: 1, y: 0, width: "auto" }}
+                        exit={{ opacity: 0, y: 0, width: "auto" }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
                       >
-                        <p className="text-xs leading-tight tracking-tight s:text-[9px]">
+                        <p className="whitespace-nowrap text-xs leading-tight tracking-tight s:text-[9px]">
                           Deposit Successful
                         </p>
                       </motion.div>
