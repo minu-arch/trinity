@@ -1,15 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import Image from "next/image";
 import {
-  FedEx,
-  WixSvg,
-  UpsSvg,
-  GachaClub,
-  NetflixSvg,
-  DockerSvg,
   ChartSvg,
   CandelstSvg,
   GoalSvg,
@@ -19,7 +13,6 @@ import {
   TerraSvg,
   SageSvg,
   EchoSvg,
-  HavenSvg,
   VitalSvg,
 } from "@/app/svg/SvgIcons";
 import TinyBarChart from "./components/TinyBartChart";
@@ -43,6 +36,35 @@ const Header = () => {
 
     return () => clearInterval(interval);
   }, [status]);
+
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+
+  const boxVariants = {
+    initial: { x: 20, opacity: 0 },
+    animate: {
+      x: 0,
+      opacity: 1,
+
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const secondVariants = {
+    initial: { x: -20, opacity: 0 },
+    animate: {
+      x: 0,
+      opacity: 1,
+
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
   return (
     <div className="container my-5">
@@ -98,9 +120,16 @@ const Header = () => {
           Investing plans that meet all your needs.
         </p>
       </div>
+
       <div className="flex size-full flex-1 flex-col gap-4 xl:flex-row">
         {/* Brokerage Account */}
-        <div className="flex size-full min-h-[464px] grow flex-col rounded-lg bg-colored text-clrtitle md:pl-10">
+        <motion.div
+          className="flex size-full min-h-[464px] grow flex-col rounded-lg bg-colored text-clrtitle md:pl-10"
+          variants={boxVariants}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          ref={ref}
+        >
           <div className="relative flex flex-col rounded-lg bg-colored pl-4">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               Brokerage Account
@@ -174,10 +203,16 @@ const Header = () => {
               <div className="absolute left-1/2 top-full z-10 w-2/5 -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-white p-2 shadow-md s:top-full xs:top-[103%] md:top-[110%] lg:top-[117%]" />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* IRA Account */}
-        <div className="flex size-full min-h-[464px] grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10">
+        <motion.div
+          className="flex size-full min-h-[464px] grow flex-col rounded-lg bg-colored pl-4 text-clrtitle md:pl-10"
+          variants={secondVariants}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          ref={ref}
+        >
           <div className="container flex flex-col items-start">
             <p className="mb-2 mt-4 max-w-fit rounded-2xl bg-bgtext px-4 py-1 text-xs text-clrtitle">
               IRA Account
@@ -191,7 +226,7 @@ const Header = () => {
           <div className="flex size-full shrink items-center justify-center">
             <TinyBarChart />
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* Divider  */}
       <div className="mt-16 h-[0.1px] w-full bg-[#546c4c]" />
