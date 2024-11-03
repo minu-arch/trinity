@@ -16,6 +16,7 @@ const Section = () => {
             contact us at support@trinity.com
           </p>
         </div>
+        {/* Faq */}
         <div className="mt-10">
           <Faq />
         </div>
