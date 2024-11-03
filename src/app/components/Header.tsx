@@ -19,6 +19,8 @@ import TinyBarChart from "./components/TinyBartChart";
 import Button from "./components/Button";
 import BlurIn from "@/components/ui/BlurIn";
 import { Marquee } from "@/components/ui/Marquee";
+import InvestmentTypes from "./components/InvestmentTypes";
+import HeaderTitle from "./components/HeaderTitle";
 
 const Header = () => {
   const [status, setStatus] = useState("deposit");
@@ -76,16 +78,7 @@ const Header = () => {
               word="Retirement investing made simple"
             />
 
-            <p className="mt-5 whitespace-pre-wrap break-words text-center text-responsive-xs text-clrnavbar">
-              Explore the next frontier of tools to kickstart your
-            </p>
-            <p className="whitespace-pre-wrap break-words text-center text-responsive-xs text-clrnavbar">
-              financial journey to success.
-            </p>
-            <Button>Get Started</Button>
-            <p className="mt-5 text-responsive-xs text-clrnavbar">
-              Try for free
-            </p>
+            <HeaderTitle />
             <div className="my-5 flex size-full h-2/4 items-center justify-center rounded-md bg-[#546c4c] p-1 s:rounded-xl s:p-2 xs:p-5 md:p-7 lg:p-40">
               <Image
                 src="/dashboard.webp"
@@ -235,47 +228,8 @@ const Header = () => {
         Trinity offers a range of investment types that{"\n"} suit your
         retirement goals.
       </h1>
-      <div className="container mt-10 flex size-full flex-col gap-6 xl:flex-row">
-        <div className="flex size-full h-28 gap-4">
-          <div className="h-full w-[0.1px] bg-[#546c4c]" />
-          <div className="flex size-full flex-col justify-end">
-            <GoalSvg />
-            <h2 className="mt-2 font-medium text-clrtitle s:text-[14px] md:text-[16px]">
-              Goal-based Planning
-            </h2>
-            <p className="mt-3 text-[14px] text-clrparagraph s:text-[11px] md:text-[14px]">
-              Save and invest for your retirement years, ensuring a{"\n"}
-              comfortable lifestyle when you stop working.
-            </p>
-          </div>
-        </div>
-        <div className="flex size-full h-28 gap-4">
-          <div className="h-full w-[0.1px] bg-[#546c4c]" />
-          <div className="flex size-full flex-col justify-end">
-            <CandelstSvg />
-            <h2 className="mt-2 font-medium text-clrtitle s:text-[14px] md:text-[16px]">
-              Automated Rebalancing
-            </h2>
-            <p className="mt-3 text-[14px] text-clrparagraph s:text-[11px] md:text-[14px]">
-              Save and invest for your retirement years, ensuring a{"\n"}
-              comfortable lifestyle when you stop working.
-            </p>
-          </div>
-        </div>
-        <div className="flex size-full h-28 gap-4">
-          <div className="h-full w-[0.1px] bg-[#546c4c]" />
-          <div className="flex size-full flex-col justify-end">
-            <ChartSvg />
-            <h2 className="mt-2 font-medium text-clrtitle s:text-[14px] md:text-[16px]">
-              Retirement Income Projections
-            </h2>
-            <p className="mt-3 text-[14px] text-clrparagraph s:text-[11px] md:text-[14px]">
-              Save and invest for your retirement years, ensuring a{"\n"}
-              comfortable lifestyle when you stop working.
-            </p>
-          </div>
-        </div>
-      </div>
+
+      <InvestmentTypes />
     </div>
   );
 };
