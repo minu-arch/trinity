@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
   animated?: boolean;
-  variants?: any;
+  variants?: Variants;
   initial?: string;
   animate?: string;
 }
