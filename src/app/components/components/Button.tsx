@@ -16,10 +16,3 @@ const Button = ({ children, onClick, className = "" }: ButtonProps) => {
 };
 
 export default Button;
-
-// Acest pattern îți permite să:
-// Reutilizezi stilizarea în întreaga aplicație
-// Modifici conținutul butonului (children)
-// Adaugi handleri pentru evenimente (onClick)
-// Extinzi stilizarea cu clase adiționale (className)
-// Menții consistența design-ului
