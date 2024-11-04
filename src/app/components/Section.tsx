@@ -8,7 +8,7 @@ const Section = () => {
   return (
     <div className="container mb-16">
       <div className="mt-16 flex size-full min-h-[500px] flex-1 flex-col items-start justify-center gap-4 rounded-xl bg-colored p-4 xl:flex-row">
-        <div className="mt-10 flex size-full flex-col items-start">
+        <div className="mt-10 flex size-full flex-1 flex-col items-start">
           <h2 className="mb-5 text-xl font-medium text-clrtitle">
             Questions & Answers
           </h2>
@@ -18,7 +18,7 @@ const Section = () => {
           </p>
         </div>
         {/* Faq */}
-        <div className="mt-10">
+        <div className="size-full flex-1">
           <Faq />
         </div>
       </div>

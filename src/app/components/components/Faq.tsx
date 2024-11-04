@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 interface FaqItem {
   question: string;
@@ -46,56 +47,89 @@ const faqItems: FaqItem[] = [
   },
 ];
 
-const FaqItem: React.FC<FaqItem & { isOpen: boolean; toggle: () => void }> = ({
-  question,
-  answer,
-  isOpen,
-  toggle,
-}) => {
+const FaqItem: React.FC<
+  FaqItem & { isOpen: boolean; toggle: () => void; index: number }
+> = ({ question, answer, isOpen, toggle, index }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="w-full">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.2,
+      }}
+      className="w-full"
+    >
       <button
-        className="flex w-full items-center justify-between"
+        className="mt-7 flex w-full items-center justify-between"
         onClick={toggle}
       >
-        <span className="text-sm font-medium tracking-tighter text-clrtitle">
-          {question}
-        </span>
+        <div className="w-full text-left">
+          <motion.span
+            className="text-sm font-medium tracking-tighter text-clrtitle"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.2,
+            }}
+          >
+            {question}
+          </motion.span>
+        </div>
         <span
-          className={`self-end text-2xl text-clrtitle transition-transform duration-300 ease-in-out ${isOpen ? "rotate-180" : ""}`}
+          className={`self-end text-2xl text-clrtitle transition-transform duration-300 ease-in-out ${
+            isOpen ? "rotate-180" : ""
+          }`}
         >
           +
         </span>
       </button>
       <div className="size-full h-px bg-neutral-500" />
-      <div
-        className={`mb-5 mt-2 overflow-hidden text-sm text-clrparagraph transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
-      >
-        {answer}
-        {question === "Is there a refund policy for tickets?" && (
-          <div className="mt-2">
-            <Link
-              href="/ticketing-policy"
-              className="hover:text-herotext hover:cursor-pointer"
-            >
-              Check our ticketing policy.
-            </Link>
-          </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mb-5 mt-2 overflow-hidden text-sm text-clrparagraph"
+          >
+            {answer}
+            {question === "Is there a refund policy for tickets?" && (
+              <div className="mt-2">
+                <Link
+                  href="/ticketing-policy"
+                  className="hover:text-herotext hover:cursor-pointer"
+                >
+                  Check our ticketing policy.
+                </Link>
+              </div>
+            )}
+          </motion.div>
         )}
-      </div>
-    </div>
+      </AnimatePresence>
+    </motion.div>
   );
 };
 
 const Faq = () => {
   const [openItemIndex, setOpenItemIndex] = useState<number | null>(null);
 
+  React.useEffect(() => {
+    setOpenItemIndex(null);
+  }, []);
+
   const toggleItem = (index: number) => {
     setOpenItemIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
-    <div className="flex-1">
+    <div className="w-full">
       {faqItems.map((item, index) => (
         <FaqItem
           key={index}
@@ -103,6 +137,7 @@ const Faq = () => {
           answer={item.answer}
           isOpen={openItemIndex === index}
           toggle={() => toggleItem(index)}
+          index={index}
         />
       ))}
     </div>
