@@ -3,6 +3,7 @@ import Faq from "./components/Faq";
 import Button from "./components/Button";
 import Image from "next/image";
 import { BoxReveal } from "@/components/ui/BoxReveal";
+
 const Section = () => {
   return (
     <div className="container mb-16">
